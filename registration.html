@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/main.css">
+	<section id="mail" class="mail">
+		<div class="container">
+			<h2 class="section-title">Здесь можно зарегистрировать свой аккаунт</h2>
+			<form action="registration.php" method="POST" class="form">
+				<input type="name"placeholder="Ф.И.О." name="name" class="input" required>
+				<input type="email"placeholder="E-mail" name="email" class="input" required>
+				<input type="tel"placeholder="Телефон" name="telephone" class="input" required>
+				<input type="password" placeholder="Придумайте пароль" name="password" class="input"required>
+				<input type="password" placeholder="Повторите пароль" name="password_confirn" class="input"required>
+
+				<button type="submit" class="btn btn-form">Зарегистрироваться!</button>
+				<a href="index.html" class="btn btn-form forgot-password">У вас уже есть акккаунт? Жмякайте сюда!</a>
+
+			</form>
+
+		</div>
+	</section>
+
+</body>
+</html>
