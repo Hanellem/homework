@@ -1,0 +1,88 @@
+body {
+	font-family: 'Ubuntu Regular', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+	background: #ecf3f8;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu Bold', sans-serif;
+	font-weight: 700 ;
+}
+p {
+	line-height: 1.5em;
+}
+
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.mail {
+	padding-top: 100px;
+}
+
+.section-title {
+	font-size: 30px;
+	text-align: center;
+}
+
+.form {
+	margin-top: 50px;
+	margin-left: 414px;
+
+}
+
+.input {
+	color: #9c9b9f;
+	padding-left: 15px;
+	background: #fff;
+	border: 1px solid #bbb;
+	width: 343px;
+	height: 48px;
+	display: flex ;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.btn {
+	background: #ffd429;
+	font-family: 'Montserrat Black', sans-serif;	
+	color: #2e2a1b;
+	display: block;
+	width: 220px;
+	padding: 20px 0;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.5s ease;
+}
+.btn:hover {
+	background: #f4db7a;
+}
+
+.btn-form {
+	width: 343px;
+	border: 0;
+}
+.forgot-password {
+	margin-top: 10px;
+	text-align: center;
+	background-color: rgb(236, 107, 98);
+
+}
+.msg {
+	border: 2px solid #e7bb08;
+	border-radius: 3px;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+
+}
+
