@@ -16,7 +16,6 @@ $userAcc = [
     'password' => $password
 ]; 
 
-$encodeUserAcc = json_encode($userAcc);
 $ourData = file_get_contents("customer.json");
 $objects = json_decode($ourData);
 
@@ -24,48 +23,20 @@ $error_array = [];
 $user_success = [];
 
 
-foreach ($objects as $object) {
+foreach ($objects as $key=>$value) {
 
-    if ($id === $object->id) {
-        $profile = $object;
+    if ($id === $value->id) {
 
-        // $index = indexOf($object);
-        // splice($index);
-        unset($object[$key]);
-        $handle = fopen('customer.json', 'r+');
-        // unset($objects[$object]);
+		$objects[$key] = $userAcc;
+		var_dump($objects);
+		// exit();
+		$handle = fopen('customer.json', 'w+');
 
-        
+		$encode_objects = json_encode($objects);
+		fwrite($handle, '[' . $encode_objects . ']');
+		fclose($handle);
 
-        fseek($handle, 0, SEEK_END);
-
-    
-            // перемещаемся на байт назад и убираем последний символ, он же "]"
-            fseek($handle, -1, SEEK_END);
-
-            // добавляемя запятую
-            fwrite($handle, ',', 1);
-
-            // добавляем новую строку json, добавляем в конец "]"
-            fwrite($handle, $encodeUserAcc . ']');
-
-            fclose($handle);
-        
+		die('Vse good mzf');
+   
     }
 }
-    
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
- 
