@@ -24,17 +24,17 @@ $password = $_SESSION['password'];
 
 	<section id="mail" class="mail">
 		<div class="container">
-		<form action="edit_profile.php" method="POST" class="form">
-				<img src="../image/avatar.jpg" alt="avatar">
-				<p>ID - <?= $id ?></p>
+		<form action="php/edit_profile.php" method="POST" class="form">
+				<img src="image/avatar.jpg" alt="avatar">
+				
 				<p>NAME - <?= $name ?></p>
 				<p>EMAIL - <?= $email ?></p>
 				<p>TELEPHONE - <?= $tel ?></p>
 
-				<input type="text" placeholder="Ф.И.О." value="<?= $name ?>" name="name" class="input" required>
-				<input type="email" placeholder="E-mail" value="<?= $email ?>" name="email" class="input" required>
-				<input type="telephone" placeholder="Телефон" value="<?= $tel ?>" name="tel" class="input" required>
-				<input type="password" placeholder="Пароль" value="<?= $password ?>" name="password" class="input" required>
+				<input type="text" placeholder="Ф.И.О." value="<?= $name ?>" name="name" class="input input-profile" required>
+				<input type="email" placeholder="E-mail" value="<?= $email ?>" name="email" class="input input-profile" required>
+				<input type="telephone" placeholder="Телефон" value="<?= $tel ?>" name="tel" class="input input-profile" required>
+				
 
 
 				<button type="submit" class="btn btn-profile">Сохранить изменения</button>

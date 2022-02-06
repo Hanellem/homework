@@ -16,9 +16,9 @@ session_start();
 
 	<section id="mail" class="mail">
 		<div class="container">
-		<form action="view_edit_profile.php" method="POST" class="form">
-				<img src="../image/avatar.jpg" alt="avatar">
-				<p>ID - <?= $_SESSION['id'] ?></p>
+		<form action="view_edit_profile.php" method="POST" class="form ">
+				<img src="image/avatar.jpg" alt="avatar">
+				
 				<p>NAME - <?= $_SESSION['name'] ?></p>
 				<p>EMAIL - <?= $_SESSION['email'] ?></p>
 				<p>TELEPHONE - <?= $_SESSION['tel'] ?></p>
@@ -26,7 +26,9 @@ session_start();
 
 
 				<button type="submit" class="btn btn-profile">Редактировать профиль</button>
-		</fprm>		
+				<br>
+				<a href="view_edit_password.php" class="btn btn-profile forgot-password">Изменить пароль!<br>Серьёзно думаешь им надо твой акк?)))</a>
+		</form>		
 		</div>
 	</section>
 			
