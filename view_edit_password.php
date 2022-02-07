@@ -22,7 +22,7 @@ $tel = $_SESSION['tel'];
 
 	<section id="mail" class="mail">
 		<div class="container">
-		<form action="php/edit_password.php" method="POST" class="form">
+			<form action="php/edit_password.php" method="POST" class="form">
 				<img src="image/avatar.jpg" alt="avatar">
 				
 				<p>NAME - <?= $name ?></p>
@@ -31,13 +31,21 @@ $tel = $_SESSION['tel'];
 
 				
 				<input type="password" placeholder="Действующий пароль" name="password" class="input input-profile" required>
-                <input type="password" placeholder="Новый пароль" name="new_password" class="input input-profile" required>
-                <input type="password" placeholder="Повторите пароль" name="password_confirm" class="input input-profile" required>
+				<input type="password" placeholder="Новый пароль" name="new_password" class="input input-profile" required>
+				<input type="password" placeholder="Повторите пароль" name="password_confirm" class="input input-profile" required>
 				
 
 
 				<button type="submit" class="btn btn-profile">Сохранить изменения</button>
-		</fprm>		
+				<!-- Решил вывести ошибки здесь, сразу удаляем что-бы не было пустое поле -->
+				<?php 
+					if ($_SESSION['message']){
+						echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';						
+					}
+					unset($_SESSION['message']);
+						
+				?>
+			</form>		
 		</div>
 	</section>
 			

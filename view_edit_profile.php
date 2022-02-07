@@ -38,6 +38,14 @@ $password = $_SESSION['password'];
 
 
 				<button type="submit" class="btn btn-profile">Сохранить изменения</button>
+
+				<?php 
+					if ($_SESSION['message']){
+						echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';						
+					}
+					unset($_SESSION['message']);
+						
+				?>
 		</fprm>		
 		</div>
 	</section>

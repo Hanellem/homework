@@ -3,7 +3,7 @@ session_start();
 // Передаём всё с формы хтмл в переменные с помощью параметра пост что скрывает данные в строке 
 
 $email = $_POST["email"];
-$password = $_POST["password"]; 
+$password = $_POST['password']; 
 
 $ourData = file_get_contents("../database/customer.json");
 // Преобразуем в объект

@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$tel = $_SESSION['tel'];
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +21,13 @@ session_start();
 		<form action="view_edit_profile.php" method="POST" class="form ">
 				<img src="image/avatar.jpg" alt="avatar">
 				
-				<p>NAME - <?= $_SESSION['name'] ?></p>
-				<p>EMAIL - <?= $_SESSION['email'] ?></p>
-				<p>TELEPHONE - <?= $_SESSION['tel'] ?></p>
-				<p>ПАРОЛЬ - <?= $_SESSION['password'] ?></p>
-
+				<p>NAME - <?= $name ?></p>
+				<p>EMAIL - <?= $email ?></p>
+				<p>TELEPHONE - <?= $tel ?></p>
 
 				<button type="submit" class="btn btn-profile">Редактировать профиль</button>
-				<br>
-				<a href="view_edit_password.php" class="btn btn-profile forgot-password">Изменить пароль!<br>Серьёзно думаешь им надо твой акк?)))</a>
+				
+				<a href="view_edit_password.php" class="btn btn-profile forgot-password">Изменить пароль!?<br>Серьёзно думаешь им надо твой акк?)))</a>
 		</form>		
 		</div>
 	</section>
